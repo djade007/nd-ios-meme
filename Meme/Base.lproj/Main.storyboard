@@ -41,15 +41,19 @@
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xpU-kV-J3K">
-                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="705"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T1s-yC-0ae">
-                                <rect key="frame" x="179" y="124" width="56" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="T1s-yC-0ae">
+                                <rect key="frame" x="20" y="124" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="aSd-Ho-xZ6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6L-up-nUP">
-                                <rect key="frame" x="163" y="744" width="88" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="o6L-up-nUP">
+                                <rect key="frame" x="20" y="759" width="374" height="19"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -59,18 +63,22 @@
                         <constraints>
                             <constraint firstItem="Agt-Q7-ZFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0LK-wq-7JQ"/>
                             <constraint firstItem="Agt-Q7-ZFD" firstAttribute="centerX" secondItem="T1s-yC-0ae" secondAttribute="centerX" id="FIv-T2-YMY"/>
-                            <constraint firstItem="xpU-kV-J3K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kn8-Fq-HbI"/>
+                            <constraint firstItem="xpU-kV-J3K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kn8-Fq-HbI"/>
                             <constraint firstItem="G5V-Ql-iml" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Nee-pb-b6V"/>
                             <constraint firstItem="T1s-yC-0ae" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PcR-O9-NOw"/>
                             <constraint firstItem="T1s-yC-0ae" firstAttribute="top" secondItem="Agt-Q7-ZFD" secondAttribute="top" constant="80" id="PrC-Z5-wQ7"/>
                             <constraint firstItem="G5V-Ql-iml" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rhi-Q6-tdX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xpU-kV-J3K" secondAttribute="trailing" constant="20" id="WoW-O3-NKV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xpU-kV-J3K" secondAttribute="trailing" id="WoW-O3-NKV"/>
                             <constraint firstItem="G5V-Ql-iml" firstAttribute="trailing" secondItem="Agt-Q7-ZFD" secondAttribute="trailing" id="a7A-vP-too"/>
                             <constraint firstItem="o6L-up-nUP" firstAttribute="bottom" secondItem="G5V-Ql-iml" secondAttribute="top" constant="-35" id="e4t-j2-hOO"/>
-                            <constraint firstItem="xpU-kV-J3K" firstAttribute="top" secondItem="Agt-Q7-ZFD" secondAttribute="bottom" constant="20" id="loD-sB-7aM"/>
+                            <constraint firstItem="o6L-up-nUP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="etC-Iy-0VC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T1s-yC-0ae" secondAttribute="trailing" constant="20" id="kcc-q8-SSA"/>
+                            <constraint firstItem="xpU-kV-J3K" firstAttribute="top" secondItem="Agt-Q7-ZFD" secondAttribute="bottom" id="loD-sB-7aM"/>
                             <constraint firstItem="G5V-Ql-iml" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nor-4R-fe8"/>
                             <constraint firstItem="G5V-Ql-iml" firstAttribute="top" secondItem="xpU-kV-J3K" secondAttribute="bottom" constant="20" id="pwb-PO-2fR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o6L-up-nUP" secondAttribute="trailing" constant="20" id="r5D-aP-zBV"/>
                             <constraint firstItem="Agt-Q7-ZFD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uLe-uN-v61"/>
+                            <constraint firstItem="T1s-yC-0ae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wUG-oO-9lO"/>
                             <constraint firstItem="o6L-up-nUP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xCr-Bo-il1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o6L-up-nUP" secondAttribute="bottom" constant="84" id="ytk-B2-VAU"/>
                         </constraints>
