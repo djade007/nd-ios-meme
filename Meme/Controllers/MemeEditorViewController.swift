@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Default texts
     let defaultTopText = "TOP"
@@ -25,6 +25,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomToolbar: UIToolbar!
     
     var memedImage: UIImage!
+    
+    // Called when a new meme has been saved
+    var didSave: () -> Void = { () }
     
     let topDelegate = MeTextDelegate()
     let bottomDelegate = MeTextDelegate()
@@ -59,6 +62,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewWillDisappear(animated)
         
         unSubscribeToKeyboardNotifications()
+    }
+    
+    @IBAction func cancelEditor(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     func setUpTextFieldProperties(textField: UITextField, text: String, delegate: UITextFieldDelegate) {
@@ -117,7 +124,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func save() {
             // Create the meme
-            _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+            let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+        
+        // Add to the memes array on the Application Delegate
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
+        didSave()
     }
 
 
